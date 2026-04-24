@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Liên Hệ</title>
+    <style>
+        /* Thiết kế cơ bản cho trang */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Khung bao ngoài của Form */
+        .contact-form {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 450px;
+        }
+
+        .contact-form h2 {
+            margin-top: 0;
+            color: #2c3e50;
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        /* Các nhóm ô nhập liệu */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            box-sizing: border-box; /* Giữ cho padding không làm tràn chiều rộng */
+        }
+
+        /* Hiệu ứng khi nhấn vào ô nhập liệu */
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        /* Nút gửi */
+        .submit-btn {
+            width: 100%;
+            background-color: #3498db;
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contact-form">
+        <h2>Liên Hệ Với Chúng Tôi</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Họ và Tên</label>
+                <input type="text" id="name" name="name" placeholder="Nhập tên của bạn..." required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Chủ đề</label>
+                <input type="text" id="subject" name="subject" placeholder="Bạn cần hỗ trợ về việc gì?">
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Nội dung tin nhắn</label>
+                <textarea id="message" name="message" placeholder="Viết nội dung tại đây..."></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Gửi Thông Tin</button>
+        </form>
+    </div>
+
+</body>
+</html>
